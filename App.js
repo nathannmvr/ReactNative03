@@ -4,6 +4,6 @@ import Turma from './src/pages/turma';
 
 export default function App() {
   return(
-      <Home />
+      <Criar />
   );
 }

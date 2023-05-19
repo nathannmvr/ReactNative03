@@ -8,7 +8,7 @@ export default function Criar() {
                     <Image source={require('../img/voltar.png')} className="h-[40px] w-[40px]"></Image>
                 </TouchableOpacity>
             </View>
-            <View className="flex-1 justify-center items-center bg-gray-800">
+            <View className="flex-1 justify-center items-center bg-gray-800 mb-[70px]">
                 <Text className="color-white text-xl font-bold">Nova Turma</Text>
                 <Text className="color-gray-400 mt-[5px]">Crie uma turma para adicionar pessoas</Text>
                 <TextInput className="mt-7 rounded-md w-[310px] h-[50px] items-center justify-center bg-gray-900 text-gray-400 text-center" placeholder="Nome da turma" placeholderTextColor={"#9ca3af"} />
