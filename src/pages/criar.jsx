@@ -1,12 +1,14 @@
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
+import { groupCreate } from "../storage/group/groupCreate";
 
 export default function Criar() {
 
     const [group, setGroup] = useState();
     const navigation = useNavigation();
-    function handleAdd(){
+    async function handleAdd() {
+        await groupCreate(group);
         navigation.navigate('turma', {group});
     }
 
