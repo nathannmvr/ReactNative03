@@ -1,14 +1,17 @@
 import { View, Text, TextInput, TouchableOpacity, Image, ScrollView } from "react-native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 export default function Turma() {
+    const route = useRoute();
+    const navigation = useNavigation();
     return (
         <View className="flex-1 items-center bg-gray-800">
             <View className="mt-[30px] w-[310]">
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate('home')}>
                     <Image source={require('../img/voltar.png')} className="h-[40px] w-[40px]"></Image>
                 </TouchableOpacity>
             </View>
-            <Text className="color-white text-xl font-bold mt-[30px]">Nome da Turma</Text>
+            <Text className="color-white text-xl font-bold mt-[30px]">{route.params.group}</Text>
             <Text className="color-gray-400 mt-[5px]">Adicione a galera e Separe os times</Text>
             <View className="flex-row mt-7">
                 <TextInput className="items-start justify-start bg-gray-900 text-gray-400 w-[260px] rounded-l-md pl-4" placeholder="Nome do participante" placeholderTextColor={"#9ca3af"}  />

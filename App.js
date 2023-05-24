@@ -1,9 +1,7 @@
-import Home from './src/pages/home';
-import Criar from './src/pages/criar';
-import Turma from './src/pages/turma';
+import { Routes } from "./src/routes/Routes";
 
 export default function App() {
   return(
-      <Criar />
+      <Routes />
   );
 }
