@@ -9,7 +9,7 @@ export async function groupCreate(newGroup) {
         if (groupAlreadyExists) {
             throw 'Já existe';
         } else {
-            const storage = JSON.stringify(...storedGroups, newGroup);
+            const storage = JSON.stringify([...storedGroups, newGroup]);
             await AsyncStorage.setItem(GROUP_COLLECTION,storage);
         }
     } catch (error) {
